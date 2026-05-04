@@ -30,7 +30,7 @@ estimation.
 
 **Digital Illicit Trade and the Geography of Retail Drug Markets:  
 Evidence from Cryptomarkets Using a Gravity Framework**  
-*Working Paper, April 2026*
+*Working Paper, May 2026*
 
 Using 354,000+ listing-level observations from 10 darknet cryptomarkets
 collapsed to a bilateral country-pair × drug-type × month panel, I
@@ -45,7 +45,7 @@ estimate PPML gravity models with high-dimensional fixed effects.
   on jurisdictionally familiar corridors
 
 SSRN: *(link pending)*  
-Replication code: https://github.com/rydermawby/darknet-gravity-model
+Replication code: https://github.com/ryder-mawby/darknet-gravity-model
 
 ---
 
