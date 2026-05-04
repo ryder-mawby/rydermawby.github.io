@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ryder Mawby — Economist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #1a1a18;
+      --paper: #f5f2eb;
+      --rule: #c8c2b0;
+      --accent: #8b3a2a;
+      --muted: #6b6557;
+      --mono: 'IBM Plex Mono', monospace;
+      --serif: 'Libre Baskerville', Georgia, serif;
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--serif);
+      min-height: 100vh;
+      padding: 0;
+      opacity: 0;
+      animation: pagein 0.6s ease forwards;
+    }
+
+    @keyframes pagein {
+      to { opacity: 1; }
+    }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 5rem 2rem 6rem;
+    }
+
+    /* ── Header ── */
+    header {
+      border-bottom: 1.5px solid var(--ink);
+      padding-bottom: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .name {
+      font-size: clamp(2rem, 5vw, 2.75rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+
+    .tagline {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    /* ── Sections ── */
+    section {
+      margin-bottom: 2.75rem;
+    }
+
+    .section-label {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    p {
+      font-size: 0.975rem;
+      line-height: 1.75;
+      color: var(--ink);
+    }
+
+    p + p {
+      margin-top: 0.9rem;
+    }
+
+    /* ── Paper entry ── */
+    .paper {
+      border-left: 2px solid var(--accent);
+      padding-left: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .paper-title {
+      font-size: 0.975rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 0.3rem;
+    }
+
+    .paper-meta {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-bottom: 0.55rem;
+    }
+
+    .paper-abstract {
+      font-size: 0.88rem;
+      line-height: 1.65;
+      color: #3a3830;
+    }
+
+    .paper-links {
+      margin-top: 0.6rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* ── Links ── */
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+
+    a:hover {
+      border-bottom-color: var(--accent);
+    }
+
+    .link-pill {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.2rem 0.6rem;
+      border-radius: 2px;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .link-pill:hover {
+      background: var(--accent);
+      color: var(--paper);
+      border-bottom-color: transparent;
+    }
+
+    /* ── Data credentials ── */
+    .cred-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .cred-list li {
+      font-size: 0.88rem;
+      line-height: 1.5;
+      padding-left: 1.1rem;
+      position: relative;
+      color: #3a3830;
+    }
+
+    .cred-list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--rule);
+      font-family: var(--mono);
+    }
+
+    /* ── Contact ── */
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      align-items: center;
+    }
+
+    .contact-item {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .contact-item a {
+      color: var(--ink);
+      font-family: var(--mono);
+      font-size: 0.78rem;
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--rule);
+      padding-top: 1.5rem;
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      color: var(--rule);
+      letter-spacing: 0.04em;
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 3rem 1.25rem 4rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <h1 class="name">Ryder Mawby</h1>
+      <p class="tagline">Empirical Economist &nbsp;·&nbsp; Illicit Market Geography &nbsp;·&nbsp; Cryptomarket Data</p>
+    </header>
+
+    <section>
+      <div class="section-label">About</div>
+      <p>
+        I am an MA student in Economics at California State University, Long Beach (completing December 2026)
+        and a UC Berkeley alumnus (BA Political Economy, 2023, Regents' Scholar). My research applies
+        structural econometric methods to illicit markets, with a focus on darknet cryptomarket data,
+        bilateral trade flows, and the geography of enforcement.
+      </p>
+      <p>
+        My current work uses listing-level data from the Hikari darknet archive — obtained through direct
+        researcher correspondence with Nicolas Christin (CMU) and David Décary-Hétu (Université de Montréal)
+        — to estimate gravity models of illicit drug trade. I program in Stata and R.
+      </p>
+    </section>
+
+    <section>
+      <div class="section-label">Working Paper</div>
+      <div class="paper">
+        <div class="paper-title">Digital Illicit Trade and the Geography of Retail Drug Markets: Evidence from Cryptomarkets Using a Gravity Framework</div>
+        <div class="paper-meta">Working Paper &nbsp;·&nbsp; April 2026</div>
+        <p class="paper-abstract">
+          Using 354,000+ listing-level observations from 10 darknet cryptomarkets collapsed to a bilateral
+          country-pair × drug-type × month panel, I estimate PPML gravity models with high-dimensional
+          fixed effects. Distance elasticity: approximately −2.05. Contrary to every licit-goods gravity
+          study, contiguity, common official language, and colonial ties all carry large negative
+          coefficients. An extensive-intensive margin decomposition shows this operates entirely through
+          the intensive margin — consistent with bilateral enforcement coordination suppressing realized
+          transactions on jurisdictionally familiar corridors.
+        </p>
+        <div class="paper-links">
+          <a class="link-pill" href="https://ssrn.com/abstract=XXXXXXX" target="_blank">SSRN</a>
+          <a class="link-pill" href="https://github.com/rydermawby/darknet-gravity-model" target="_blank">Replication Code</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-label">Data &amp; Methods</div>
+      <ul class="cred-list">
+        <li>354,212 cleaned listing-level observations, 10 cryptomarkets, 2014–2022 (Hikari archive, via Nicolas Christin, CMU)</li>
+        <li>Terabyte-scale supplementary archive via David Décary-Hétu, Université de Montréal</li>
+        <li>8-stage multilingual keyword classification pipeline — 57 granular drug categories, 5 languages</li>
+        <li>PPML gravity estimation with high-dimensional fixed effects (ppmlhdfe, reghdfe)</li>
+        <li>50+ exporting countries, 90+ importing countries</li>
+        <li>Drug taxonomy appendix: <a href="Mawby_Drug_Appendix_MASTER.xlsx">download</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="section-label">Contact</div>
+      <div class="contact-row">
+        <span class="contact-item">Email: <a href="mailto:rydermawby@berkeley.edu">rydermawby@berkeley.edu</a></span>
+        <span class="contact-item">GitHub: <a href="https://github.com/rydermawby/darknet-gravity-model" target="_blank">rydermawby</a></span>
+        <span class="contact-item">SSRN: <a href="https://ssrn.com/author=XXXXXXX" target="_blank">Author page</a></span>
+      </div>
+    </section>
+
+    <footer>
+      Last updated April 2026 &nbsp;·&nbsp; rydermawby.com
+    </footer>
+
+  </div>
+</body>
+</html>
