@@ -3,293 +3,187 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ryder Mawby — Researcher</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <title>Ryder Mawby — Economist</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --ink: #1a1a18;
-      --paper: #f5f2eb;
-      --rule: #c8c2b0;
-      --accent: #8b3a2a;
-      --muted: #6b6557;
-      --mono: 'IBM Plex Mono', monospace;
-      --serif: 'Libre Baskerville', Georgia, serif;
-    }
-
-    html { font-size: 16px; }
-
     body {
-      background: var(--paper);
-      color: var(--ink);
-      font-family: var(--serif);
-      min-height: 100vh;
-      padding: 0;
-      opacity: 0;
-      animation: pagein 0.6s ease forwards;
+      font-family: 'Libre Baskerville', serif;
+      background: #f5f2eb;
+      color: #1a1a18;
+      margin: 0;
     }
 
-    @keyframes pagein {
-      to { opacity: 1; }
-    }
-
-    /* ── Layout ── */
     .container {
-      max-width: 680px;
+      max-width: 720px;
       margin: 0 auto;
-      padding: 5rem 2rem 6rem;
+      padding: 4rem 2rem;
     }
 
-    /* ── Header ── */
-    header {
-      border-bottom: 1.5px solid var(--ink);
-      padding-bottom: 2rem;
-      margin-bottom: 2.5rem;
-    }
-
-    .name {
-      font-size: clamp(2rem, 5vw, 2.75rem);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      line-height: 1.1;
-      margin-bottom: 0.5rem;
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.4rem;
     }
 
     .tagline {
-      font-family: var(--mono);
-      font-size: 0.78rem;
-      color: var(--muted);
-      letter-spacing: 0.04em;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.75rem;
       text-transform: uppercase;
+      color: #6b6557;
+      margin-bottom: 2.5rem;
     }
 
-    /* ── Sections ── */
-    section {
-      margin-bottom: 2.75rem;
-    }
-
-    .section-label {
-      font-family: var(--mono);
-      font-size: 0.68rem;
-      letter-spacing: 0.12em;
+    h2 {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .section-label::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--rule);
+      color: #8b3a2a;
+      margin-top: 2rem;
+      margin-bottom: 0.7rem;
     }
 
     p {
-      font-size: 0.975rem;
-      line-height: 1.75;
-      color: var(--ink);
+      font-size: 0.95rem;
+      line-height: 1.7;
     }
 
-    p + p {
-      margin-top: 0.9rem;
-    }
-
-    /* ── Paper entry ── */
     .paper {
-      border-left: 2px solid var(--accent);
-      padding-left: 1.25rem;
-      margin-bottom: 1.5rem;
+      border-left: 2px solid #8b3a2a;
+      padding-left: 1rem;
+      margin-top: 1rem;
     }
 
     .paper-title {
-      font-size: 0.975rem;
       font-weight: 700;
-      line-height: 1.4;
-      margin-bottom: 0.3rem;
+      font-size: 0.95rem;
     }
 
     .paper-meta {
-      font-family: var(--mono);
-      font-size: 0.72rem;
-      color: var(--muted);
-      margin-bottom: 0.55rem;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.7rem;
+      color: #6b6557;
+      margin-bottom: 0.5rem;
     }
 
-    .paper-abstract {
-      font-size: 0.88rem;
-      line-height: 1.65;
-      color: #3a3830;
+    ul {
+      padding-left: 1.2rem;
+      font-size: 0.95rem;
+      line-height: 1.7;
     }
 
-    .paper-links {
-      margin-top: 0.6rem;
+    .links {
+      margin-top: 1rem;
       display: flex;
       gap: 1rem;
       flex-wrap: wrap;
     }
 
-    /* ── Links ── */
     a {
-      color: var(--accent);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.7rem;
       text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.15s;
+      border: 1px solid #8b3a2a;
+      padding: 0.3rem 0.6rem;
+      color: #8b3a2a;
     }
 
     a:hover {
-      border-bottom-color: var(--accent);
+      background: #8b3a2a;
+      color: #f5f2eb;
     }
 
-    .link-pill {
-      font-family: var(--mono);
-      font-size: 0.7rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--accent);
-      border: 1px solid var(--accent);
-      padding: 0.2rem 0.6rem;
-      border-radius: 2px;
-      transition: background 0.15s, color 0.15s;
-    }
-
-    .link-pill:hover {
-      background: var(--accent);
-      color: var(--paper);
-      border-bottom-color: transparent;
-    }
-
-    /* ── Data credentials ── */
-    .cred-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    .cred-list li {
-      font-size: 0.88rem;
-      line-height: 1.5;
-      padding-left: 1.1rem;
-      position: relative;
-      color: #3a3830;
-    }
-
-    .cred-list li::before {
-      content: '—';
-      position: absolute;
-      left: 0;
-      color: var(--rule);
-      font-family: var(--mono);
-    }
-
-    /* ── Contact ── */
-    .contact-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.25rem;
-      align-items: center;
-    }
-
-    .contact-item {
-      font-family: var(--mono);
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
-
-    .contact-item a {
-      color: var(--ink);
-      font-family: var(--mono);
-      font-size: 0.78rem;
-    }
-
-    /* ── Footer ── */
     footer {
-      border-top: 1px solid var(--rule);
-      padding-top: 1.5rem;
-      font-family: var(--mono);
-      font-size: 0.68rem;
-      color: var(--rule);
-      letter-spacing: 0.04em;
-    }
-
-    @media (max-width: 480px) {
-      .container { padding: 3rem 1.25rem 4rem; }
+      margin-top: 3rem;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.7rem;
+      color: #c8c2b0;
     }
   </style>
 </head>
+
 <body>
   <div class="container">
 
-    <header>
-      <h1 class="name">Ryder Mawby</h1>
-      <p class="tagline">Empirical Economist &nbsp;·&nbsp; Illicit Market Geography &nbsp;·&nbsp; Cryptomarket Data</p>
-    </header>
+    <h1>Ryder Mawby</h1>
+    <div class="tagline">
+      Empirical Economist · Illicit Markets · Applied Microeconometrics
+    </div>
 
-    <section>
-      <div class="section-label">About</div>
-      <p>
-        I am an MA student in Economics at California State University, Long Beach (completing December 2026)
-        and a UC Berkeley alumnus (BA Political Economy, 2023, Regents' Scholar). My research applies
-        structural econometric methods to illicit markets, with a focus on darknet cryptomarket data,
-        bilateral trade flows, and the geography of enforcement.
-      </p>
-      <p>
-        My current work uses listing-level data from the Hikari darknet archive — obtained through direct
-        researcher correspondence with Nicolas Christin (CMU) and David Décary-Hétu (Université de Montréal)
-        — to estimate gravity models of illicit drug trade. I program in Stata and R.
-      </p>
-    </section>
+    <h2>About</h2>
+    <p>
+      I am an MA student in Economics at California State University, Long Beach (expected December 2026) and a UC Berkeley alumnus (BA Political Economy, 2023).
+    </p>
 
-    <section>
-      <div class="section-label">Working Paper</div>
-      <div class="paper">
-        <div class="paper-title">Digital Illicit Trade and the Geography of Retail Drug Markets: Evidence from Cryptomarkets Using a Gravity Framework</div>
-        <div class="paper-meta">Working Paper &nbsp;·&nbsp; April 2026</div>
-        <p class="paper-abstract">
-          Using 354,000+ listing-level observations from 10 darknet cryptomarkets collapsed to a bilateral
-          country-pair × drug-type × month panel, I estimate PPML gravity models with high-dimensional
-          fixed effects. Distance elasticity: approximately −2.05. Contrary to every licit-goods gravity
-          study, contiguity, common official language, and colonial ties all carry large negative
-          coefficients. An extensive-intensive margin decomposition shows this operates entirely through
-          the intensive margin — consistent with bilateral enforcement coordination suppressing realized
-          transactions on jurisdictionally familiar corridors.
-        </p>
-        <div class="paper-links">
-          <a class="link-pill" href="https://ssrn.com/abstract=XXXXXXX" target="_blank">SSRN</a>
-          <a class="link-pill" href="https://github.com/ryder-mawby/darknet-gravity-model" target="_blank">Replication Code</a>
-        </div>
+    <p>
+      My research applies structural and reduced-form econometric methods to illicit markets, platform economies, and labor market outcomes. I work primarily with large-scale microdata, combining data construction pipelines with high-dimensional estimation techniques.
+    </p>
+
+    <p>
+      I program in Stata, R, and Python, with a focus on PPML gravity models, panel data methods, and causal inference.
+    </p>
+
+    <h2>Research</h2>
+
+    <div class="paper">
+      <div class="paper-title">
+        Digital Illicit Trade and the Geography of Retail Drug Markets
       </div>
-    </section>
-
-    <section>
-      <div class="section-label">Data &amp; Methods</div>
-      <ul class="cred-list">
-        <li>354,212 cleaned listing-level observations, 10 cryptomarkets, 2014–2022 (Hikari archive, via Nicolas Christin, CMU)</li>
-        <li>Terabyte-scale supplementary archive via David Décary-Hétu, Université de Montréal</li>
-        <li>8-stage multilingual keyword classification pipeline — 57 granular drug categories, 5 languages</li>
-        <li>PPML gravity estimation with high-dimensional fixed effects (ppmlhdfe, reghdfe)</li>
-        <li>50+ exporting countries, 90+ importing countries</li>
-        <li>Drug taxonomy appendix: <a href="Mawby_Drug_Appendix_MASTER.xlsx">download</a></li>
-      </ul>
-    </section>
-
-    <section>
-      <div class="section-label">Contact</div>
-      <div class="contact-row">
-        <span class="contact-item">Email: <a href="mailto:rydermawby@berkeley.edu">rydermawby@berkeley.edu</a></span>
-        <span class="contact-item">GitHub: <a href="https://github.com/ryder-mawby/darknet-gravity-model" target="_blank">rydermawby</a></span>
-        <span class="contact-item">SSRN: <a href="https://ssrn.com/author=XXXXXXX" target="_blank">Author page</a></span>
+      <div class="paper-meta">
+        MA Thesis · 2025–Present
       </div>
-    </section>
+      <p>
+        Applies a structural gravity model to darknet cryptomarket trade using 354,000+ listing-level observations. Finds that standard gravity facilitation variables invert — contiguity, common language, and colonial ties suppress trade — with effects operating through the intensive margin and driven by enforcement coordination.
+      </p>
+
+      <div class="links">
+        <a href="https://ssrn.com/abstract=XXXXXXX" target="_blank">Paper</a>
+        <a href="https://github.com/ryder-mawby/darknet-gravity-model" target="_blank">Code</a>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-title">
+        EU Membership and Bilateral Trade
+      </div>
+      <div class="paper-meta">
+        2026
+      </div>
+      <p>
+        PPML gravity model with three-way fixed effects using CEPII data. Finds EU membership increases bilateral trade by ~12%, robust across specifications.
+      </p>
+    </div>
+
+    <div class="paper">
+      <div class="paper-title">
+        Labor Supply Responses to Proposition 22
+      </div>
+      <div class="paper-meta">
+        2026 · Co-authored
+      </div>
+      <p>
+        Difference-in-differences analysis using CPS microdata. Finds an ~11% decline in gig self-employment following policy implementation.
+      </p>
+    </div>
+
+    <h2>Methods & Data</h2>
+    <ul>
+      <li>PPML gravity models and high-dimensional fixed effects</li>
+      <li>Panel data, DiD, event-study designs</li>
+      <li>Large-scale data construction and classification pipelines</li>
+      <li>Cryptomarket, CPS, and international trade datasets</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <div class="links">
+      <a href="mailto:rydermawby@berkeley.edu">Email</a>
+      <a href="https://github.com/ryder-mawby" target="_blank">GitHub</a>
+      <a href="https://ssrn.com/author=XXXXXXX" target="_blank">SSRN</a>
+    </div>
 
     <footer>
-      Last updated May 2026 &nbsp;·&nbsp; rydermawby.com
+      Los Angeles · Updated May 2026
     </footer>
 
   </div>
