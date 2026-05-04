@@ -8,11 +8,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      font-family: 'Libre Baskerville', serif;
       background: #f5f2eb;
       color: #1a1a18;
-      margin: 0;
+      font-family: 'Libre Baskerville', serif;
     }
 
     .container {
@@ -22,7 +23,7 @@
     }
 
     h1 {
-      font-size: 2.2rem;
+      font-size: 2.4rem;
       margin-bottom: 0.4rem;
     }
 
@@ -67,6 +68,11 @@
       margin-bottom: 0.5rem;
     }
 
+    .paper-abstract {
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
     ul {
       padding-left: 1.2rem;
       font-size: 0.95rem;
@@ -74,9 +80,9 @@
     }
 
     .links {
-      margin-top: 1rem;
+      margin-top: 0.8rem;
       display: flex;
-      gap: 1rem;
+      gap: 0.8rem;
       flex-wrap: wrap;
     }
 
@@ -117,7 +123,7 @@
     </p>
 
     <p>
-      My research applies structural and reduced-form econometric methods to illicit markets, platform economies, and labor market outcomes. I work primarily with large-scale microdata, combining data construction pipelines with high-dimensional estimation techniques.
+      My research applies structural and reduced-form econometric methods to illicit markets, platform economies, and labor market outcomes. I work with large-scale microdata, combining data construction pipelines with high-dimensional estimation techniques.
     </p>
 
     <p>
@@ -133,13 +139,14 @@
       <div class="paper-meta">
         MA Thesis · 2025–Present
       </div>
-      <p>
-        Applies a structural gravity model to darknet cryptomarket trade using 354,000+ listing-level observations. Finds that standard gravity facilitation variables invert — contiguity, common language, and colonial ties suppress trade — with effects operating through the intensive margin and driven by enforcement coordination.
+      <p class="paper-abstract">
+        Structural gravity analysis using 354,000+ listing-level observations from darknet cryptomarkets. Finds that standard gravity facilitation variables invert — contiguity, common language, and colonial ties suppress trade — with effects operating through the intensive margin and driven by enforcement coordination.
       </p>
 
       <div class="links">
         <a href="https://ssrn.com/abstract=XXXXXXX" target="_blank">Paper</a>
         <a href="https://github.com/ryder-mawby/darknet-gravity-model" target="_blank">Code</a>
+        <a href="https://github.com/ryder-mawby/darknet-gravity-model/raw/main/Mawby_Drug_Appendix_MASTER.xlsx" target="_blank">Appendix</a>
       </div>
     </div>
 
@@ -150,8 +157,8 @@
       <div class="paper-meta">
         2026
       </div>
-      <p>
-        PPML gravity model with three-way fixed effects using CEPII data. Finds EU membership increases bilateral trade by ~12%, robust across specifications.
+      <p class="paper-abstract">
+        PPML gravity model with three-way fixed effects using CEPII data. Finds EU membership increases bilateral trade by approximately 12%, robust across specifications.
       </p>
     </div>
 
@@ -162,16 +169,16 @@
       <div class="paper-meta">
         2026 · Co-authored
       </div>
-      <p>
-        Difference-in-differences analysis using CPS microdata. Finds an ~11% decline in gig self-employment following policy implementation.
+      <p class="paper-abstract">
+        Difference-in-differences analysis using CPS microdata. Finds an approximately 11% decline in gig-worker self-employment following policy implementation.
       </p>
     </div>
 
-    <h2>Methods & Data</h2>
+    <h2>Methods</h2>
     <ul>
       <li>PPML gravity models and high-dimensional fixed effects</li>
-      <li>Panel data, DiD, event-study designs</li>
-      <li>Large-scale data construction and classification pipelines</li>
+      <li>Panel data, DiD, and event-study designs</li>
+      <li>Large-scale classification pipelines</li>
       <li>Cryptomarket, CPS, and international trade datasets</li>
     </ul>
 
