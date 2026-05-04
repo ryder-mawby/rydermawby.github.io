@@ -1,51 +1,29 @@
 # Ryder Mawby
 
-Empirical Economist · Illicit Markets · Applied Microeconometrics  
+**Empirical Economist · Illicit Markets · Applied Microeconometrics**
+MA Economics, California State University, Long Beach (Expected December 2026)
+BA Political Economy, UC Berkeley (2023, Regents' Scholar)
+Los Angeles
 
-MA Economics, California State University, Long Beach (Expected December 2026)  
-BA Political Economy, UC Berkeley (2023, Regents’ Scholar)  
-
----
-
-## About
-
-This repository hosts my personal website:  
-👉 https://rydermawby.com
-
-My research applies structural and reduced-form econometric methods to illicit markets, platform economies, and labor market outcomes. I work with large-scale microdata, combining data construction pipelines with high-dimensional estimation techniques.
+→ **[rydermawby.com](https://rydermawby.com)**
 
 ---
 
 ## Research
 
-My current work focuses on the geography of illicit markets using darknet cryptomarket data.
+My work applies structural and reduced-form econometric methods to illicit markets and platform economies. The current focus is the geography of digital drug trade — how enforcement architecture, bilateral institutions, and platform anonymity shape where illegal transactions actually happen.
 
-- **Digital Illicit Trade and the Geography of Retail Drug Markets**  
-  Structural gravity analysis using 350k+ observations.  
-  Finds that standard gravity facilitation variables invert, consistent with enforcement coordination suppressing trade.
+**Working paper:** [Digital Illicit Trade and the Geography of Retail Drug Markets](https://ssrn.com/abstract=XXXXXXX)
+Using 354,000+ listing-level observations from ten darknet cryptomarkets, I estimate PPML gravity models and find that standard gravity facilitation variables invert: contiguity, common language, and colonial ties all *suppress* bilateral drug trade — the opposite of every licit-goods result in the literature. The suppression operates entirely through realized trade volume, not vendor advertising behavior, consistent with bilateral enforcement coordination raising interdiction risk on jurisdictionally familiar corridors.
 
-Replication code:  
-https://github.com/ryder-mawby/darknet-gravity-model
-
----
-
-## Methods
-
-- PPML gravity models  
-- Panel data and high-dimensional fixed effects  
-- Difference-in-differences and causal inference  
-- Large-scale classification pipelines  
+Replication code: [darknet-gravity-model](https://github.com/rydermawby/darknet-gravity-model)
 
 ---
 
 ## Contact
 
-- Email: rydermawby@berkeley.edu  
-- GitHub: https://github.com/ryder-mawby  
-- SSRN: (link)
+rydermawby@berkeley.edu · [GitHub](https://github.com/rydermawby) · [SSRN](https://ssrn.com/author=XXXXXXX)
 
 ---
 
-## Notes
-
-The website is built as a static HTML site and deployed via GitHub Pages.
+*Static site deployed via GitHub Pages.*
