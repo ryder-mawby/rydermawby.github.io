@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ryder Mawby — Empirical Researcher, Illicit Markets</title>
+  <title>Ryder Mawby — Illicit Market Analyst · Cryptomarket Intelligence</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
 
   <style>
@@ -32,14 +32,12 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ── Layout ─────────────────────────────────── */
     .page {
       max-width: 680px;
       margin: 0 auto;
       padding: 5rem 2rem 6rem;
     }
 
-    /* ── Header ─────────────────────────────────── */
     header {
       margin-bottom: 4rem;
       opacity: 0;
@@ -81,7 +79,6 @@
     }
     .descriptor span:last-child::after { content: ''; }
 
-    /* ── Sections ────────────────────────────────── */
     section {
       margin-bottom: 3rem;
       opacity: 0;
@@ -94,7 +91,6 @@
     section:nth-child(4) { animation-delay: 0.3s; }
     section:nth-child(5) { animation-delay: 0.4s; }
     section:nth-child(6) { animation-delay: 0.5s; }
-    section:nth-child(7) { animation-delay: 0.6s; }
 
     .section-label {
       font-family: var(--mono);
@@ -125,7 +121,6 @@
 
     p:last-child { margin-bottom: 0; }
 
-    /* ── Paper card ──────────────────────────────── */
     .paper-card {
       border-left: 2px solid var(--rust);
       padding: 1.4rem 1.4rem 1.4rem 1.6rem;
@@ -191,32 +186,6 @@
       color: var(--paper);
     }
 
-    /* ── Secondary papers ────────────────────────── */
-    .secondary-paper {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: baseline;
-      gap: 1rem;
-      padding: 0.75rem 0;
-      border-bottom: 1px solid var(--rule);
-    }
-
-    .secondary-paper:first-child { border-top: 1px solid var(--rule); }
-
-    .secondary-title {
-      font-family: var(--serif);
-      font-size: 0.92rem;
-      color: var(--ink);
-    }
-
-    .secondary-year {
-      font-family: var(--mono);
-      font-size: 0.65rem;
-      color: var(--muted);
-      white-space: nowrap;
-    }
-
-    /* ── Methods grid ────────────────────────────── */
     .methods-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -240,14 +209,12 @@
       font-size: 0.7rem;
     }
 
-    /* ── Contact ─────────────────────────────────── */
     .contact-row {
       display: flex;
       gap: 0.6rem;
       flex-wrap: wrap;
     }
 
-    /* ── Footer ──────────────────────────────────── */
     footer {
       margin-top: 4rem;
       padding-top: 1.5rem;
@@ -278,8 +245,8 @@
     <header>
       <div class="name">Ryder <em>Mawby</em></div>
       <div class="descriptor">
-        <span>Illicit Markets</span>
-        <span>Empirical Economics</span>
+        <span>Illicit Market Analyst</span>
+        <span>Cryptomarket Intelligence</span>
         <span>Los Angeles</span>
       </div>
     </header>
@@ -293,7 +260,7 @@
                     filter:contrast(1.08) brightness(0.88);
                     opacity:0.82;margin-bottom:1.4rem;" />
         <p>
-          I am an MA student in Economics at California State University, Long Beach (expected December 2026) and a UC Berkeley alumnus (BA Political Economy, 2023, Regents' Scholar).
+          Empirical economist and data analyst specializing in illicit digital markets and cryptomarket intelligence. UC Berkeley alumnus, BA Political Economy (2023, Regents' Scholar), based in Los Angeles.
         </p>
         <p>
           My research applies structural and reduced-form econometric methods to illicit markets and platform economies — with a particular focus on the geography of digital drug trade, enforcement architecture, and the measurable signatures that criminal markets leave in transaction-level data.
@@ -310,25 +277,15 @@
         <p class="paper-finding">
           Using 354,000+ listing-level observations from 10 darknet cryptomarkets collapsed to a bilateral panel, I estimate PPML gravity models and find that <strong>contiguity, common language, and colonial ties all suppress illicit trade</strong> — the inverse of every licit-goods result in the literature. An extensive–intensive margin decomposition shows vendors advertise into nearby markets at normal rates; realized volumes are what collapse. The most coherent interpretation is bilateral enforcement coordination raising interdiction risk on jurisdictionally familiar corridors.
         </p>
+        <p class="paper-finding">
+          The underlying data contribution is an 8-stage multilingual drug classification pipeline resolving vendor-entered listings into a <strong>57-category pharmacological taxonomy</strong> across English, German, Dutch, Finnish, and French — publicly available and designed for use on any cryptomarket dataset.
+        </p>
         <div class="paper-links">
           <a class="pill" href="https://github.com/ryder-mawby/darknet-gravity-model/raw/main/Mawby_Gravity.pdf" target="_blank">Paper (PDF)</a>
+          <a class="pill" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6608299" target="_blank">SSRN</a>
           <a class="pill" href="https://github.com/ryder-mawby/darknet-gravity-model" target="_blank">Code</a>
           <a class="pill" href="https://github.com/ryder-mawby/darknet-gravity-model/raw/main/Mawby_Drug_Appendix_MASTER.xlsx" target="_blank">Appendix</a>
         </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="section-label">Other Work</div>
-
-      <div class="secondary-paper">
-        <div class="secondary-title">Labor Supply Responses to Proposition 22 <span style="font-family:var(--mono);font-size:0.7rem;color:var(--muted);font-style:normal"> — DiD, CPS microdata</span></div>
-        <div class="secondary-year">2026 · Co-authored</div>
-      </div>
-
-      <div class="secondary-paper">
-        <div class="secondary-title">EU Membership and Bilateral Trade <span style="font-family:var(--mono);font-size:0.7rem;color:var(--muted);font-style:normal"> — PPML, CEPII</span></div>
-        <div class="secondary-year">2026</div>
       </div>
     </section>
 
